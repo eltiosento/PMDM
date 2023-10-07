@@ -1,7 +1,7 @@
 # **PROJECTE APP COMPTADOR** 
 ## MEMÒRIA:
 ### 1. ANÀLISI DE L'ESTRUCTURA DEL PROJECTE
-El projecte a desenvolupar es tracta d'una aplicació android amb una única activitat, composta per un comptador i un botó que incrementa aquest comptador quan es fa clic en ell. 
+El projecte a desenvolupar és tracta d'una aplicació android amb una única activitat, composta per un comptador i un botó que incrementa aquest comptador quan és fa clic sobre ell. 
 
 ![app comptador](Documentacio/1.jpg)
 
@@ -26,7 +26,7 @@ Com que ja saben on son ubicades les activitats anem a analitzar-ne una.
 Ens ubicarem a 
 >Comptador\app\src\main\res\layout\activity_main.xml
 
-i podrem observar la següent estructura:
+I podrem observar la següent estructura:
 ```xml
         <Button
                 android:id="@+id/btAdd"
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
-i ens fixarem amb les linies: 
+I ens fixarem amb les linies: 
 
 ```kotlin
 val TAG = "Estic passant per: "
@@ -141,7 +141,7 @@ Al implementar les funcions onSaveInstanceState i onRestoreInstanceState el que 
 
 
 
-### 4. AMPLLIANT LA FUNCIONALITAT AMB DECREMENTS I RESET
+### 4. AMPLIANT LA FUNCIONALITAT AMB DECREMENTS I RESET
 
 A continució anem afegir dues funcionalitas noves a la nostra aplicació o millor dit dues activitats, el botó de decrement i el botó de restaurar. 
 Aleshores el que farem serà modificar el fitxer activity_main.xml de la següent manera:
