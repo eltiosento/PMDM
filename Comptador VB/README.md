@@ -42,7 +42,7 @@ I podrem observar la següent estructura:
  
     
 
-Aquesta activitat es la associada al botó que ens permetra incrementar el marcador cada vegada que el polsem.
+Aquesta activitat es la associada al botó que ens permetrà incrementar el marcador cada vegada que el polsem.
     
 
 
@@ -75,7 +75,7 @@ Anem a veure amb el mètode Log com transcorre la nostra activitat per el cicle 
 Ens dirigirem:
 >Comptador\app\src\main\java\com\ieseljust\pmdm\comptador\MainActivity.kt
 
-I afegirem aquest codei:
+I afegirem aquest codi:
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
-I ens fixarem amb les linies: 
+I ens fixarem amb les línies: 
 
 ```kotlin
 val TAG = "Estic passant per: "
@@ -101,13 +101,13 @@ val TAG = "Estic passant per: "
 .
 Log.d(TAG, "Al mètode onCreate")
 ```
-Així quan ejecutem el program podem veure al registre del logcat per on esta passant:
+Així quan executem el programa, podem veure al registre del logcat per on està passant:
 
 ![LogCat](Documentacio/4.jpg "Logcat")
 
 
 ### 3. SOLUCIÓ D LA PÈRDUA D'ESTAT
-Aquest programa tal i com ens el hem trobat, funciona molt bé, però té un xicotet error i és que al girar la pantalla no ens aguarda la puntuació acumulada: 
+Aquest programa tal i com ens el hem trobat, funciona molt bé, però té un xicotet error i és que al girar la pantalla no ens guarda la puntuació acumulada: 
 
 ![problema comptador](Documentacio/5.gif)
 
@@ -134,7 +134,7 @@ Per tal de solucionar-ho en dirigirem al fitxer del MainActivity.kt e implementa
                                              
     }
 ```
-Al implementar les funcions onSaveInstanceState i onRestoreInstanceState el que hem det ha sigut solucionar el problema del canvi d'estat.
+Al implementar les funcions onSaveInstanceState i onRestoreInstanceState el que hem fet ha sigut solucionar el problema del canvi d'estat.
 
 
 
@@ -143,7 +143,7 @@ Al implementar les funcions onSaveInstanceState i onRestoreInstanceState el que 
 
 ### 4. AMPLIANT LA FUNCIONALITAT AMB DECREMENTS I RESET
 
-A continució anem afegir dues funcionalitas noves a la nostra aplicació o millor dit dues activitats, el botó de decrement i el botó de restaurar. 
+A continuació anem afegir dues funcionalitats noves a la nostra aplicació o millor dit dues activitats, el botó de decrement i el botó de restaurar. 
 Aleshores el que farem serà modificar el fitxer activity_main.xml de la següent manera:
 
 ```xml
@@ -204,7 +204,7 @@ Aleshores el que farem serà modificar el fitxer activity_main.xml de la següen
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-Un cop fet açò ens dirigirem al fitxer MainActivity.kt i implementarem el codi per a donarli funcionalitat als botons que hem creat, deixant finalment el projecte d'aquesta manera:
+Un cop fet açò ens dirigirem al fitxer MainActivity.kt i implementarem el codi per a donar-li funcionalitat als botons que hem creat, deixant finalment el projecte d'aquesta manera:
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -287,7 +287,7 @@ Vegem la funcionalitat final:
 
 ### 5. CANVIS PER IMPLEMANTER EL VIEW BINDING
 
- A aquest apartat enem a implemanetar el view binding seguit els següents pasos:
+ A aquest apartat anem a implementar el view binding seguit els següents passos:
 
 1. Activar el ViewBinding a les buildFeatures de l’script Gradle del mòdul.
     * Ens dirigim a la següent ruta i afegim a la secció d’android el següent codi:
@@ -299,7 +299,7 @@ Vegem la funcionalitat final:
     }
 ```
 2. Sincronitzar el projecte amb aquest script, per a que genere les classes de vinculació,
-polzant la bombilla que ens proporciona el ID i li diguem que ens ho sincronitze:
+polsant la perilla que ens proporciona el ID i li diguem que ens ho sincronitze:
 
 ![sincronitzar el ViewBinding](Documentacio/8.jpg) 
 
@@ -331,7 +331,7 @@ class MainActivity : AppCompatActivity() {
 ```
 6. Accedir als elements de la interfície a través d’aquest objecte de vinculació.
 
-    * Ara sustituim:
+    * Ara substituïm:
     ```kotlin
     val textViewContador=findViewById<TextView>(R.id.textViewComptador)
     textViewContador.setText(comptador.toString())
@@ -340,8 +340,8 @@ class MainActivity : AppCompatActivity() {
     ```
     binding.textViewComptador.setText(comptador.toString())
     ```
-    * Amb això, a través de l’objecte binding, podrem accedir a les diferents vistes de la interfície com si es tractara de propietats d’aquest objecte, el nom del qual correspon al de l’ID de la vista. Per exemple si tenim un TextView amb l’ID textView, podrem accedir a aquest mitjançant binding.textView i amb .setText(comptador.toString()) li estem pasant o millor dit assignant el valor de la variable comprador. 
-    Ho farem aixi amb la resta de codi tal que axi:
+    * Amb això, a través de l’objecte binding, podrem accedir a les diferents vistes de la interfície com si es tractara de propietats d’aquest objecte, el nom del qual correspon al de l’ID de la vista. Per exemple si tenim un TextView amb l’ID textView, podrem accedir a aquest mitjançant binding.textView i amb .setText(comptador.toString()) li estem passant o millor dit assignant el valor de la variable comprador. 
+    Ho farem aixi amb la resta de codi tal que axí:
 
     ```kotlin
     class MainActivity : AppCompatActivity() {
