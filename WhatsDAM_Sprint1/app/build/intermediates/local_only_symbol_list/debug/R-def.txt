@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color ic_launcher_wd_background
+color white
+drawable background
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable iconapp
+drawable logo
+drawable rounded_edittext
+id MessageText
+id buttonConnect
+id connectionInfoTextView
+id imageView
+id nickNameText
+id sendMessage
+id serverAddressText
+layout activity_main
+layout activity_messages_window
+mipmap ic_launcher
+mipmap ic_launcher_round
+string Connect
+string app_name
+string nickname
+string serverAddress
+style Base.Theme.WhatsDAM
+style Theme.WhatsDAM
+xml backup_rules
+xml data_extraction_rules

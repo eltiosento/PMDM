@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.whatsdam.app-mergeDebugResources-27:/layout/activity_main.xml",
+        "source": "com.example.whatsdam.app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.whatsdam.app-mergeDebugResources-27:/layout/activity_messages_window.xml",
+        "source": "com.example.whatsdam.app-main-30:/layout/activity_messages_window.xml"
+    }
+]
