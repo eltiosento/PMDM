@@ -2,9 +2,8 @@ package com.ieseljust.pmdm.comptador
 
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.ieseljust.pmdm.comptador.databinding.ActivityMainBinding //Importar la classe de vinculació per al Binding
+import com.ieseljust.pmdm.comptador.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     //val TAG = "Estic passant per: "
@@ -15,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater) //Definim a binding amb l'unflat de la vista
+        binding= ActivityMainBinding.inflate(layoutInflater) //Definim a binding amb l'unflat de la vista (l'unflat fa d'enllaç de les vistes amb el bindig)
         val view = binding.root
         //Log.d(TAG, "Al mètode onCreate")
         setContentView(view) //Modificar el SetContentView per afegir-lo l’arrel del binding (binding.root)
@@ -42,14 +41,8 @@ class MainActivity : AppCompatActivity() {
 
  */
 
-        // Declarem variables
-        val textViewContador = binding.textViewComptador
-        val btAdd = binding.btAdd
-        val btResta = binding.btResta
-        val btReset = binding.btReset
-
-
-        btAdd.setOnClickListener {
+        // Ara amb el binding podem cridar a totes les vistes del nostre pojecte amb binding.id y ens estalviem lo de referencia, amb variables i cridar a findViewById
+        binding.btAdd.setOnClickListener {
             comptador++
             binding.textViewComptador.setText(comptador.toString())
 
@@ -59,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         // Asociaciamos una expresióin lambda como
         // respuesta (callback) al evento Clic sobre
         // el botón -
-        btResta.setOnClickListener {
+        binding.btResta.setOnClickListener {
             if (comptador == 0){
                 comptador = 0
             }else{
@@ -73,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         // Asociaciamos una expresióin lambda como
         // respuesta (callback) al evento Clic sobre
         // el botón reset
-        btReset.setOnClickListener {
+        binding.btReset.setOnClickListener {
             comptador=0
             binding.textViewComptador.setText(comptador.toString())
 
@@ -96,9 +89,9 @@ class MainActivity : AppCompatActivity() {
         //asignem a la variable comptador el valor que em guardat amb onSaveInstanceState diguenli la clau
         comptador = estat.getInt("contador")
         //actualitzem el textView
-        val textViewContador = findViewById<TextView>(R.id.textViewComptador)
-        textViewContador.text = comptador.toString() // ho psem aixi perque es com ho recomana AStudio
-                                                    // al clicar la bombilleta
+        //val textViewContador = findViewById<TextView>(R.id.textViewComptador)
+        binding.textViewComptador.text = comptador.toString()
+
     }
 
 }

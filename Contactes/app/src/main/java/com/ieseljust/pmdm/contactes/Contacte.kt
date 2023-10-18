@@ -1,3 +1,8 @@
 package com.ieseljust.pmdm.contactes
 
-data class Contacte()
+import java.io.Serializable
+
+data class Contacte(
+    var name:String,
+    var img: Int,
+):Serializable
