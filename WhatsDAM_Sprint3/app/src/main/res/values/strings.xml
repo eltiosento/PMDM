@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WhatsDAM</string>
+    <string name="nickname">Nikname </string>
+    <string name="serverAddress">Server Address</string>
+    <string name='Connect'>Connect</string>
+    <string name="nikname">nikname</string>
+    <string name="connectat_a_192_168_0_1_com_a_fulanito">Connectat a 192.168.0.1 com a Fulanito</string>
+    <string name="misatge">misatge</string>
+</resources>
